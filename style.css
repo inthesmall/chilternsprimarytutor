@@ -1,11 +1,26 @@
 body {
     background-color: #9ed6f7;
     font-family: sans-serif;
+    margin: 0;
+}
+
+.placeholder {
+    width: 100%;
+    padding: 3em 0;
+    border: 2px solid black;
 }
 
 .container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "header"
+        "summary"
+        "headshot"
+        "about"
+        "experience"
+        "services"
+        "rates"
+        "contact";
     align-items: center;
     justify-items: center;
     padding: 2vh 8vw;
@@ -13,9 +28,6 @@ body {
 }
 
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     padding: 1vw;
     box-sizing: border-box;
@@ -23,22 +35,96 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-content: space-around;
+    align-items: center;
+    text-align: center;
 
     background-color: green;
 }
 
+h1 {
+    margin: 1em;
+}
+
+h2 {
+    text-align: center;
+}
+
 header img {
+    display: none;
     height: 10vh;
 }
 
 header address {
-    margin-top: auto;
-    margin-bottom: auto;
+    display: none;
+}
+
+.summary {
+    grid-area: summary;
 }
 
 .headshot {
+    grid-area: headshot;
+
     object-fit: cover;
     width: 70%;
     max-height: 100%;
+}
+
+.about {
+    grid-area: about;
+}
+
+.experience {
+    grid-area: experience;
+}
+
+.services {
+    grid-area: services;
+}
+
+.rates {
+    grid-area: rates;
+}
+
+.contact {
+    grid-area: contact;
+}
+
+@media (min-width: 425px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "header header"
+            "summary summary"
+            "headshot headshot"
+            "about about"
+            "experience experience"
+            "services services"
+            "rates contact";
+    }
+
+    header address {
+        display: initial;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "header header header"
+            "summary summary summary"
+            "headshot about about"
+            "headshot experience experience"
+            "services services services"
+            "rates . contact";
+    }
+
+    header img {
+        display: initial;
+    }
+
+    .headshot {
+        width: 100%;
+    }
 }
