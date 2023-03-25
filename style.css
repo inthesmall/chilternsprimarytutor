@@ -1,14 +1,34 @@
-.container {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-align-items: center;
-justify-items: center;
-padding: 8vw;
-gap: 8vw;
+body {
+    background-color: #9ed6f7;
+    font-family: sans-serif;
 }
 
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: 2vh 8vw;
+    gap: 8vw;
+}
+
+header {
+    grid-row: 1;
+    grid-column: 1 / 4;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+header img {
+    height: 10vh;
+}
+
+
 .headshot {
-object-fit: cover;
-width: 70%;
-max-height: 100%;
+    object-fit: cover;
+    width: 70%;
+    max-height: 100%;
 }
