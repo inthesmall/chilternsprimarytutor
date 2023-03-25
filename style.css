@@ -1,0 +1,14 @@
+.container {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+align-items: center;
+justify-items: center;
+padding: 8vw;
+gap: 8vw;
+}
+
+.headshot {
+object-fit: cover;
+width: 70%;
+max-height: 100%;
+}
