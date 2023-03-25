@@ -13,19 +13,29 @@ body {
 }
 
 header {
-    grid-row: 1;
-    grid-column: 1 / 4;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    padding: 1vw;
+    box-sizing: border-box;
 
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-content: space-around;
+
+    background-color: green;
 }
 
 header img {
     height: 10vh;
 }
 
+header address {
+    margin-top: auto;
+    margin-bottom: auto;
+}
 
 .headshot {
     object-fit: cover;
