@@ -32,7 +32,7 @@ header {
     box-sizing: border-box;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     text-align: center;
@@ -41,7 +41,9 @@ header {
 }
 
 h1 {
-    margin: 1em;
+    font-family: 'Dosis', sans-serif;
+    text-transform: uppercase;
+    margin: 0 1em;
 }
 
 h2 {
@@ -49,12 +51,12 @@ h2 {
 }
 
 header img {
-    display: none;
-    height: 10vh;
+    height: 12vh;
+    margin: 1em;
 }
 
 header address {
-    display: none;
+    margin: 1em;
 }
 
 .summary {
@@ -101,13 +103,9 @@ header address {
             "services services"
             "rates contact";
     }
-
-    header address {
-        display: initial;
-    }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 574px) {
     .container {
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
@@ -119,8 +117,8 @@ header address {
             "rates . contact";
     }
 
-    header img {
-        display: initial;
+    header {
+        flex-direction: row;
     }
 
     .headshot {
