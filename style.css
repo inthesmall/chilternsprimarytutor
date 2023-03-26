@@ -1,29 +1,8 @@
 body {
-    font-family: sans-serif;
+    font-family: 'PT Sans Narrow', sans-serif;
     margin: 0;
-}
-
-.placeholder {
-    width: 100%;
-    padding: 3em 0;
-    border: 2px solid black;
-}
-
-.container {
-    display: grid;
-    grid-template-areas:
-        "header"
-        "summary"
-        "headshot"
-        "about"
-        "experience"
-        "services"
-        "rates"
-        "contact";
-    align-items: center;
-    justify-items: center;
-    padding: 2vh 8vw;
-    gap: 8vw;
+    text-align: center;
+    font-size: large;
 }
 
 header {
@@ -46,82 +25,41 @@ h1 {
     margin: 0 1em;
 }
 
-h2 {
-    text-align: center;
+#call-out {
+    width: 100%;
+    padding: 2vh 10vw;
+    box-sizing: border-box;
+    background-color: #cde0f8
 }
 
-header img {
-    height: 12vh;
-    margin: 1em;
+#call-out p {
+    font-size: xx-large;
 }
 
-header address {
-    margin: 1em;
+#about-block p {
+    font-size: large;
 }
 
-.summary {
-    grid-area: summary;
+.content-block {
+    text-align: left;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2vh 10vw;
 }
 
-.headshot {
-    grid-area: headshot;
-
-    object-fit: cover;
-    width: 70%;
-    max-height: 100%;
+.content-block h2 {
+    color: #5e76c4;
 }
 
-.about {
-    grid-area: about;
+.content-block+.contrast h2 {
+    color: white;
 }
 
-.experience {
-    grid-area: experience;
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-.services {
-    grid-area: services;
-}
-
-.rates {
-    grid-area: rates;
-}
-
-.contact {
-    grid-area: contact;
-}
-
-@media (min-width: 425px) {
-    .container {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "header header"
-            "summary summary"
-            "headshot headshot"
-            "about about"
-            "experience experience"
-            "services services"
-            "rates contact";
-    }
-}
-
-@media (min-width: 574px) {
-    .container {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-areas:
-            "header header header"
-            "summary summary summary"
-            "headshot about about"
-            "headshot experience experience"
-            "services services services"
-            "rates . contact";
-    }
-
-    header {
-        flex-direction: row;
-    }
-
-    .headshot {
-        width: 100%;
-    }
+li:not(:last-child) {
+    margin-bottom: 1em;
 }
